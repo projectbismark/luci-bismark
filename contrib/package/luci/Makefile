@@ -448,7 +448,7 @@ $(eval $(call application,pbx-voicemail,LuCI PBX Administration Voicemail Suppor
 
 $(eval $(call application,lqtapifoss,Lantiq voip))
 
-$(eval $(call application,bismark-panel,Bismark panel,+bismark-passive-git))
+$(eval $(call application,bismark-panel,Bismark panel,+bismark-passive-git-tmpfs))
 
 ### Server Gateway Interfaces ###
 define sgi
