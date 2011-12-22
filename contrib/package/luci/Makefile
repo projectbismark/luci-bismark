@@ -7,7 +7,7 @@ ifeq ($(DUMP),)
 endif
 
 PKG_NAME:=luci
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_BUILD_PARALLEL:=0
 
