@@ -1,6 +1,6 @@
 m = Map("bismark-experiments", "Bismark Experiments")
 m.on_after_commit = function()
-    luci.sys.call("/usr/bin/setup-and-teardown-experiments")
+    luci.sys.exec("/usr/bin/setup-and-teardown-experiments")
 end
 
 s = m:section(TypedSection, "experiment", "")
