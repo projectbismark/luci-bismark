@@ -4,8 +4,11 @@ m.on_after_commit = function()
 end
 
 s = m:section(TypedSection, "experiment", "")
-s.anonymous = false
+s.anonymous = true
 s.addremove = false
-s:option(Flag, "installed", "Installed", "Participate in this experiment")
+s:option(DummyValue, "name", "Experiment name")
+s:option(DummyValue, "description", "Experiment description")
+en = s:option(Flag, "installed", "Participate in this experiment")
+en.rmempty = false
 
 return m -- Returns the map
