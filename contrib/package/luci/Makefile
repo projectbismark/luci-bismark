@@ -7,7 +7,7 @@ ifeq ($(DUMP),)
 endif
 
 PKG_NAME:=luci
-PKG_RELEASE:=2
+PKG_RELEASE:=5
 
 PKG_BUILD_PARALLEL:=0
 
@@ -448,7 +448,8 @@ $(eval $(call application,pbx-voicemail,LuCI PBX Administration Voicemail Suppor
 
 $(eval $(call application,lqtapifoss,Lantiq voip))
 
-$(eval $(call application,bismark-panel,Bismark panel,+bismark-passive-git-tmpfs))
+$(eval $(call application,bismark-experiments-manager,Bismark experiments manager,+bismark-experiments-manager))
+$(eval $(call application,bismark-passive,Bismark passive,+bismark-passive-git-tmpfs))
 
 ### Server Gateway Interfaces ###
 define sgi

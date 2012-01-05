@@ -6,7 +6,9 @@ end
 s = m:section(TypedSection, "experiment", "")
 s.anonymous = true
 s.addremove = false
-s:option(DummyValue, "name", "Experiment name")
+s:depends("available", "1")
+s:depends("installed", "1")
+s:option(DummyValue, "display_name", "Experiment name")
 s:option(DummyValue, "description", "Experiment description")
 en = s:option(Flag, "installed", "Participate in this experiment")
 en.rmempty = false
