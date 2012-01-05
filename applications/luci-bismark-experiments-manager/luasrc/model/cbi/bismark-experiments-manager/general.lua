@@ -9,7 +9,8 @@ s.addremove = false
 s:depends("available", "1")
 s:depends("installed", "1")
 s:option(DummyValue, "display_name", "Experiment name")
-s:option(DummyValue, "description", "Experiment description")
+dv = s:option(DummyValue, "description", "Experiment description")
+dv.rawhtml = true
 en = s:option(Flag, "installed", "Participate in this experiment")
 en.rmempty = false
 
