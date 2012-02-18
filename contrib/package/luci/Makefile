@@ -448,6 +448,26 @@ $(eval $(call application,pbx-voicemail,LuCI PBX Administration Voicemail Suppor
 
 $(eval $(call application,lqtapifoss,Lantiq voip))
 
+$(eval $(call application,bismark-experiments-manager,Bismark experiments manager,+bismark-experiments-manager))
+define Package/luci-app-bismark-experiments-manager/postinst
+#!/bin/sh
+rm -f /tmp/luci-indexcache
+endef
+define Package/luci-app-bismark-experiments-manager/prerm
+#!/bin/sh
+rm -f /tmp/luci-indexcache
+endef
+
+$(eval $(call application,bismark-passive,Bismark passive,+bismark-passive-git-tmpfs))
+define Package/luci-app-bismark-passive/postinst
+#!/bin/sh
+rm -f /tmp/luci-indexcache
+endef
+define Package/luci-app-bismark-passive/prerm
+#!/bin/sh
+rm -f /tmp/luci-indexcache
+endef
+
 ### Server Gateway Interfaces ###
 define sgi
   define Package/luci-sgi-$(1)
