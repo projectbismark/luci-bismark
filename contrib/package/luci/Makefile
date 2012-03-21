@@ -7,7 +7,7 @@ ifeq ($(DUMP),)
 endif
 
 PKG_NAME:=luci
-PKG_RELEASE:=1
+PKG_RELEASE:=2
 
 PKG_BUILD_PARALLEL:=0
 
@@ -458,7 +458,7 @@ define Package/luci-app-bismark-experiments-manager/prerm
 rm -f /tmp/luci-indexcache
 endef
 
-$(eval $(call application,bismark-passive,Bismark passive,+bismark-passive-git-tmpfs))
+$(eval $(call application,bismark-passive,Bismark passive,+bismark-passive))
 define Package/luci-app-bismark-passive/postinst
 #!/bin/sh
 rm -f /tmp/luci-indexcache
